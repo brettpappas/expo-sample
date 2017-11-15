@@ -1,6 +1,8 @@
 'use strict'
 import React from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
+import MyButton from '../../components/MyButton'
+
 export default class TabThreeScreenOne extends React.Component {
   render(){
     return(
@@ -12,42 +14,17 @@ export default class TabThreeScreenOne extends React.Component {
       }}>
         <Text>{ 'Tab Three Screen One' }</Text>
 
-        <TouchableOpacity
-          onPress={ () => this.props.navigation.navigate('TabThreeScreenTwo') }
-          style={{
-            padding:20,
-            borderRadius:20,
-            backgroundColor:'yellow'
-          }}>
-          <Text>{'Go to next screen this tab'}</Text>
-        </TouchableOpacity>
+        <MyButton onPress={() => this.props.navigation.navigate('TabThreeScreenTwo')}>
+          Go to next screen this tab
+        </MyButton>
 
-        <TouchableOpacity
-          onPress={
-            () => this.props.navigation.dispatch({ type:'JUMP_TO_TAB', payload:{index:0} })
-          }
-          style={{
-            padding:20,
-            borderRadius:20,
-            backgroundColor:'deeppink',
-            marginTop:20
-          }}>
-          <Text>jump to tab one</Text>
-        </TouchableOpacity>
+        <MyButton onPress={() => this.props.navigation.dispatch({ type:'JUMP_TO_TAB', payload:{index:0} })}>
+          Jump to Tab One
+        </MyButton>
 
-        <TouchableOpacity
-          onPress={
-            () => this.props.navigation.dispatch({ type:'JUMP_TO_TAB', payload:{index:1} })
-          }
-          style={{
-            padding:20,
-            borderRadius:20,
-            backgroundColor:'deeppink',
-            marginTop:20
-          }}>
-          <Text>jump to tab two</Text>
-        </TouchableOpacity>
-
+        <MyButton onPress={() => this.props.navigation.dispatch({ type:'JUMP_TO_TAB', payload:{index:1} })}>
+          Jump to Tab Two
+        </MyButton>
       </View>
     )
   }

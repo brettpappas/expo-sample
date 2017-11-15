@@ -8,7 +8,7 @@ export default class TabOneScreenTwo extends React.Component {
         return (
             <View style={styles.container}>
                 <Text>Tab One Screen Two</Text>
-                <MyButton onPress={() => this.props.navigation.goBack()}>
+                <MyButton onPress={() => this.props.navigation.goBack()} icon='backburger'>
                     Go back a screen this tab
                 </MyButton>
             </View>
@@ -19,7 +19,7 @@ export default class TabOneScreenTwo extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex:1,
-        backgroundColor:'#69c',
+        backgroundColor:'#f0f0f0',
         alignItems:'center',
         justifyContent:'center'
     },
