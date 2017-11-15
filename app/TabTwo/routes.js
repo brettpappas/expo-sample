@@ -1,20 +1,21 @@
 'use strict'
-
+import React from 'react'
+import { View, Text, StyleSheet } from 'react-native'
 import { StackNavigator } from 'react-navigation'
 
 // Screens
-import TabTwoScreenOne from './screens/TabTwoScreenOne'
-import TabTwoScreenTwo from './screens/TabTwoScreenTwo'
+import ApiExample from './screens/ApiExample'
+import ReduxExample from './screens/ReduxExample'
 
 const routes = {
-  TabTwoScreenOne: { screen: TabTwoScreenOne },
-  TabTwoScreenTwo: { screen: TabTwoScreenTwo },
-}
-// going to disable the header for now
-
-const options = {
-  headerMode: 'none',
-  initialRoute: 'TabTwoScreenOne'
+    ApiExample: { screen: ApiExample },
+    ReduxExample: { screen: ReduxExample },
 }
 
-export const NavigatorTabTwo = StackNavigator(routes, options)
+const config = {
+    // headerMode: 'none',
+    headerLeft: <Text>Go Back</Text>,
+    initialRoute: 'ApiExample'
+}
+
+export const NavigatorTabTwo = StackNavigator(routes, config)

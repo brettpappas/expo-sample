@@ -12,7 +12,16 @@ const routes = {
   TabThreeNavigation: { screen: TabThreeNavigation },
 }
 
-const options = {
+const config = {
+  navigationOptions: () => ({
+    headerTitleStyle: {
+      fontWeight: 'normal',
+      color: '#fff',
+    },
+    headerStyle: {
+      backgroundColor: '#1997ed',
+    },
+  }),
   tabBarOptions: {
     activeTintColor: '#0084fb',
     inactiveTintColor: '#999',
@@ -27,4 +36,4 @@ const options = {
   }
 }
 
-export const MainTabs = TabNavigator(routes, options)
+export const MainTabs = TabNavigator(routes, config)

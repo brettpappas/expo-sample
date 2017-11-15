@@ -1,31 +1,34 @@
 'use strict'
 import React from 'react'
-import { View, Text, TouchableOpacity } from 'react-native'
+import { View, Text } from 'react-native'
 import MyButton from '../../components/MyButton'
+import style from '../../styles'
 
 export default class TabThreeScreenOne extends React.Component {
-  render(){
-    return(
-      <View style={{
-        flex:1,
-        backgroundColor:'aqua',
-        alignItems:'center',
-        justifyContent:'center'
-      }}>
-        <Text>{ 'Tab Three Screen One' }</Text>
+    static navigationOptions = ({ navigation }) => ({
+        title: 'Tab Three: Screen One',
+        // headerLeft: <BackButton navigation={navigation} />,
+    });
 
-        <MyButton onPress={() => this.props.navigation.navigate('TabThreeScreenTwo')}>
-          Go to next screen this tab
-        </MyButton>
+    render() {
+        return (
+            <View style={style.baseWindow}>
+                <MyButton onPress={() => this.props.navigation.navigate('TouchIDExample')}>
+                    TouchID Example
+                </MyButton>
 
-        <MyButton onPress={() => this.props.navigation.dispatch({ type:'JUMP_TO_TAB', payload:{index:0} })}>
-          Jump to Tab One
-        </MyButton>
+                <MyButton onPress={() => this.props.navigation.navigate('CameraScreen')}>
+                    Camera Example
+                </MyButton>
 
-        <MyButton onPress={() => this.props.navigation.dispatch({ type:'JUMP_TO_TAB', payload:{index:1} })}>
-          Jump to Tab Two
-        </MyButton>
-      </View>
-    )
-  }
+                <MyButton onPress={() => this.props.navigation.dispatch({ type:'JUMP_TO_TAB', payload:{index:0} })}>
+                    Jump to Tab One
+                </MyButton>
+
+                <MyButton onPress={() => this.props.navigation.dispatch({ type:'JUMP_TO_TAB', payload:{index:1} })}>
+                    Jump to Tab Two
+                </MyButton>
+            </View>
+        )
+    }
 }

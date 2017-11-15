@@ -3,7 +3,13 @@ import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import MyButton from '../../components/MyButton'
 
-export default class TabOneScreenTwo extends React.Component {
+export default class ScreenTwo extends React.Component {
+    static navigationOptions = {
+        title: 'Config',
+        statusBarStyle: 'light-content',
+        barStyle: 'light-content',
+    };
+
     render() {
         return (
             <View style={styles.container}>
