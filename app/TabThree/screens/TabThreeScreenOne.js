@@ -1,6 +1,7 @@
 'use strict'
 import React from 'react'
 import { View, Text } from 'react-native'
+// import { ImagePicker, Permissions } from 'expo';
 import MyButton from '../../components/MyButton'
 import style from '../../styles'
 
@@ -18,7 +19,11 @@ export default class TabThreeScreenOne extends React.Component {
                 </MyButton>
 
                 <MyButton onPress={() => this.props.navigation.navigate('CameraScreen')}>
-                    Camera Example
+                    Custom Camera Example
+                </MyButton>
+
+                <MyButton onPress={() => this.props.navigation.navigate('ImagePickerExample')}>
+                    Camera / Image Picker
                 </MyButton>
 
                 <MyButton onPress={() => this.props.navigation.dispatch({ type:'JUMP_TO_TAB', payload:{index:0} })}>

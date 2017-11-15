@@ -20,7 +20,7 @@ export default class TouchIDExample extends React.Component {
         let authFunction = async () => {
             this.setState({ waiting: true });
             try {
-                let result = await Fingerprint.authenticateAsync('This message only shows up on iOS');
+                let result = await Fingerprint.authenticateAsync('This message only shows up on iOS.');
 
                 if (result.success) {
                     alert('Authenticated!');
