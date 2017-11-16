@@ -15,10 +15,6 @@ export default class TabTwoScreenTwo extends React.Component {
             <View style={styles.container}>
                 <Text style={{fontWeight:'bold', fontSize:20, marginBottom:10}}>Tab Two: ReduxExample.js</Text>
                 <Text>This screen uses a custom BackButton in the header since the default one takes you back to Tab One.</Text>
-
-                <MyButton onPress={() => this.props.navigation.goBack()}>
-                    Go back a screen this tab
-                </MyButton>
             </View>
         )
     }
