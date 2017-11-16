@@ -6,15 +6,26 @@ import { MaterialCommunityIcons } from '@expo/vector-icons'
 // create a component
 const MyButton = (props) => {
     let icon = <View />;
+    let label = <Text />;
+    let spacer = <View />;
+
+    if (props.icon && props.children) {
+        spacer = <View style={{marginLeft:10}} />;
+    }
 
     if (props.icon) {
-        icon = <MaterialCommunityIcons name={props.icon} size={24} style={styles.icon} />
+        icon = <MaterialCommunityIcons name={props.icon} size={24} style={styles.icon} />;
+    }
+
+    if (props.children) {
+        label = <Text style={styles.label}>{props.children}</Text>;
     }
 
     return (
         <TouchableOpacity onPress={props.onPress} style={styles.container}>
             {icon}
-            <Text style={styles.label}>{props.children}</Text>
+            {spacer}
+            {label}
         </TouchableOpacity>
     );
 };
@@ -23,8 +34,9 @@ const MyButton = (props) => {
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        padding: 15,
-        borderRadius: 10,
+        paddingVertical: 8,
+        paddingHorizontal: 10,
+        borderRadius: 5,
         backgroundColor: '#1997ed',
         marginTop: 20
     },
@@ -34,8 +46,6 @@ const styles = StyleSheet.create({
     },
     icon: {
         color: '#fff',
-        // marginTop: 2,
-        marginRight: 10,
     }
 });
 

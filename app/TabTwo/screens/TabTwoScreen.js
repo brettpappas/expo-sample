@@ -5,7 +5,7 @@ import MyButton from '../../components/MyButton'
 
 export default class TabTwoScreen extends React.Component {
     static navigationOptions = {
-        title: 'API Examples',
+        title: 'Tab Two',
     };
 
     render() {

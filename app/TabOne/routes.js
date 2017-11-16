@@ -4,11 +4,15 @@ import { StackNavigator } from 'react-navigation'
 
 // Screens
 import Welcome from './screens/Welcome'
-import ScreenTwo from './screens/ScreenTwo'
+import CustomFonts from './screens/CustomFonts'
+import IconButtons from './screens/IconButtons'
+import DeviceInfo from './screens/DeviceInfo'
 
 const routes = {
   Welcome: { screen: Welcome },
-  ScreenTwo: { screen: ScreenTwo },
+  CustomFonts: { screen: CustomFonts },
+  IconButtons: { screen: IconButtons },
+  DeviceInfo: { screen: DeviceInfo },
 }
 
 // going to disable the header for now

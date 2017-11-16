@@ -21,16 +21,16 @@ export default class Welcome extends React.Component {
             <View style={styles.container}>
                 <Text>Tab One: Welcome screen without a header.</Text>
 
-                <Text style={{fontFamily: 'open-sans-bold', fontSize: 20, marginTop:20}}>
-                    Custom font OpenSans-Bold.
-                </Text>
+                <MyButton onPress={() => this.props.navigation.navigate('CustomFonts')}>
+                    Custom Fonts
+                </MyButton>
 
-                <Text style={{fontFamily: 'roboto', fontSize: 20, marginTop:20}}>
-                    Custom font Roboto Regular.
-                </Text>
+                <MyButton onPress={() => this.props.navigation.navigate('IconButtons')}>
+                    Icon Buttons
+                </MyButton>
 
-                <MyButton onPress={() => this.props.navigation.navigate('ScreenTwo')}>
-                    Go to next screen this tab
+                <MyButton onPress={() => this.props.navigation.navigate('DeviceInfo')}>
+                    Device Info
                 </MyButton>
             </View>
         )

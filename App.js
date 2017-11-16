@@ -40,8 +40,20 @@ export default class App extends React.Component {
         return Promise.all([
             Font.loadAsync([
                 // Ionicons.font,
-                {'open-sans-bold': require('./assets/fonts/OpenSans-Bold.ttf')},
-                {'roboto': require('./assets/fonts/Roboto-Regular.ttf')},
+                {'Inconsolata': require('./assets/fonts/Inconsolata-Regular.ttf')},
+                {'Inconsolata-Bold': require('./assets/fonts/Inconsolata-Bold.ttf')},
+                {'OpenSans': require('./assets/fonts/OpenSans-Regular.ttf')},
+                {'OpenSans-Bold': require('./assets/fonts/OpenSans-Bold.ttf')},
+                {'Roboto': require('./assets/fonts/Roboto-Regular.ttf')},
+                {'Roboto-Bold': require('./assets/fonts/Roboto-Bold.ttf')},
+                {'Lato': require('./assets/fonts/Lato-Regular.ttf')},
+                {'Lato-Bold': require('./assets/fonts/Lato-Bold.ttf')},
+                {'PT_Sans': require('./assets/fonts/PT_Sans-Regular.ttf')},
+                {'PT_Sans-Bold': require('./assets/fonts/PT_Sans-Bold.ttf')},
+                {'PT_Sans-Narrow': require('./assets/fonts/PT_Sans-Narrow-Regular.ttf')},
+                {'PT_Sans-Narrow-Bold': require('./assets/fonts/PT_Sans-Narrow-Bold.ttf')},
+                {'Titillium': require('./assets/fonts/Titillium-Regular.ttf')},
+                {'Titillium-Bold': require('./assets/fonts/Titillium-Bold.ttf')},
             ]),
         ]);
     };
