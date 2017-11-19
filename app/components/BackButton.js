@@ -4,13 +4,13 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 
 // create a component
-const BackButton = (props) => {
+export function BackButton(props) {
     return (
         <TouchableOpacity onPress={() => props.navigation.goBack()} style={styles.container}>
             <MaterialCommunityIcons name='chevron-left' size={36} style={styles.icon} />
         </TouchableOpacity>
     );
-};
+}
 
 // define your styles
 const styles = StyleSheet.create({
@@ -35,4 +35,4 @@ const styles = StyleSheet.create({
 });
 
 // make this component available to the app
-export default BackButton;
+// export default BackButton;

@@ -9,7 +9,7 @@ import { addNavigationHelpers } from 'react-navigation'
 import { NavigatorTabOne } from './routes'
 
 // Icon
-import TabButton from '../components/TabButton'
+import { TabButton } from '../components'
 
 const mapStateToProps = (state) => {
     return {

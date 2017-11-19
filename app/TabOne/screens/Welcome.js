@@ -1,7 +1,7 @@
 'use strict'
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
-import MyButton from '../../components/MyButton'
+import { BackButton, MyButton } from '../../components'
 
 export default class Welcome extends React.Component {
 

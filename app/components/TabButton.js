@@ -4,11 +4,11 @@ import { View, Text, StyleSheet } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 
 // create a component
-const TabButton = (props) => {
+export function TabButton(props) {
     return (
         <MaterialCommunityIcons size={28} name={props.name} color={props.color} style={styles.icon} />
     );
-};
+}
 
 // define your styles
 const styles = StyleSheet.create({
@@ -19,4 +19,4 @@ const styles = StyleSheet.create({
 });
 
 // make this component available to the app
-export default TabButton;
+// export default TabButton;

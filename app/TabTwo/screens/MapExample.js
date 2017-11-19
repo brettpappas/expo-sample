@@ -1,7 +1,6 @@
 import React from 'react';
 import { MapView } from 'expo';
-import MyButton from '../../components/MyButton'
-import BackButton from '../../components/BackButton'
+import { BackButton, MyButton } from '../../components'
 
 export default class MapExample extends React.Component {
     static navigationOptions = ({ navigation }) => ({

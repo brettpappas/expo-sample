@@ -16,19 +16,19 @@ const mapStateToProps = (state) => {
 
 class TabBar extends React.Component {
 
-  render() {
-    const { dispatch, navigationState } = this.props
-    return (
-      <MainTabs
-        navigation={
-          addNavigationHelpers({
-            dispatch: dispatch,
-            state: navigationState,
-          })
-        }
-      />
-    )
-  }
+    render() {
+        const { dispatch, navigationState } = this.props
+        return (
+            <MainTabs
+                navigation={
+                    addNavigationHelpers({
+                        dispatch: dispatch,
+                        state: navigationState,
+                    })
+                }
+            />
+        )
+    }
 }
 
 export default connect(mapStateToProps)(TabBar)

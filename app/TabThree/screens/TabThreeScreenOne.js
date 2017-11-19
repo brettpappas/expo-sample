@@ -1,8 +1,7 @@
 'use strict'
 import React from 'react'
 import { View, Text } from 'react-native'
-// import { ImagePicker, Permissions } from 'expo';
-import MyButton from '../../components/MyButton'
+import { BackButton, MyButton } from '../../components'
 import style from '../../styles'
 
 export default class TabThreeScreenOne extends React.Component {

@@ -2,9 +2,7 @@
 import React from 'react'
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import { Camera, Permissions } from 'expo';
-
-import MyButton from '../../components/MyButton'
-import BackButton from '../../components/BackButton'
+import { BackButton, MyButton } from '../../components'
 import style from '../../styles'
 
 export default class CameraScreen extends React.Component {

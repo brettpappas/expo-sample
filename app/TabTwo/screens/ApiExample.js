@@ -1,8 +1,7 @@
 'use strict'
 import React from 'react'
 import { View, Text, StyleSheet, FlatList } from 'react-native'
-import MyButton from '../../components/MyButton'
-import BackButton from '../../components/BackButton'
+import { BackButton, MyButton } from '../../components'
 
 export default class TabTwoScreenOne extends React.Component {
     static navigationOptions = ({ navigation }) => ({

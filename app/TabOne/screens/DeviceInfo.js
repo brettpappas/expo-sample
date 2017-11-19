@@ -2,8 +2,7 @@
 import React from 'react'
 import { View, Text, FlatList } from 'react-native'
 import { Constants } from 'expo'
-import MyButton from '../../components/MyButton'
-import BackButton from '../../components/BackButton'
+import { BackButton, MyButton } from '../../components'
 import style from '../../styles'
 
 export default class DeviceInfo extends React.Component {

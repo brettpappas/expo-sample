@@ -4,7 +4,7 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 
 // create a component
-const MyButton = (props) => {
+export function MyButton(props) {
     let icon = <View />;
     let label = <Text />;
     let spacer = <View />;
@@ -28,7 +28,7 @@ const MyButton = (props) => {
             {label}
         </TouchableOpacity>
     );
-};
+}
 
 // define your styles
 const styles = StyleSheet.create({
@@ -50,4 +50,4 @@ const styles = StyleSheet.create({
 });
 
 // make this component available to the app
-export default MyButton;
+// export default MyButton;
